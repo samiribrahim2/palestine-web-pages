@@ -1,0 +1,241 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: fixed;
+    display: grid;
+    width: 100vw;
+    height: 15vh;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 60% 40%;
+    right: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: white;
+}
+
+
+.flag {
+    position: relative;
+    align-content: center;
+    text-align: center;
+}
+
+.flag>img {
+    position: relative;
+    height: 100%;
+}
+
+.headermenu {
+    position: relative;
+    align-content: center;
+    text-align: center;
+}
+
+.headermenu>img {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    object-position: center;
+    overflow: hidden;
+}
+
+.headertitle {
+    position: relative;
+    align-content: center;
+    text-align: center;
+}
+
+.headertitle h3 {
+    position: relative;
+    color: rgb(171, 26, 31);
+    font-size: 1.5rem;
+}
+
+
+.navbar {
+    align-content: center;
+    width: 100%;
+    height: auto;
+    border: 0.1rem solid black;
+    background-color: rgba(164, 39, 43, 0.992);
+    z-index: 10;
+    grid-column: span 3;
+}
+
+.navbar>ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.navbar>ul>li>a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.5s ease;
+}
+
+.navbar>ul>li>a:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar {
+    width: 1.6vh;
+    height: 1.2vh;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0.3125rem grey;
+    border-radius: 0.625rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(24 120 66);
+    border-radius: 0.625rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+main {
+    padding: 20px;
+    margin-top: 20vh;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1, h2 {
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding-top: 20px;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.wrapper .icon {
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+
+.wrapper .tooltip {
+    position: absolute;
+    top: -40px;
+    font-size: 14px;
+    background: #333;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #333;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+}
+
+
+.wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
+.wrapper .facebook:hover {
+    background: #1877f2;
+}
+
+.wrapper .facebook:hover .tooltip {
+    background: #1877f2;
+}
+
+.wrapper .facebook:hover .tooltip::before {
+    background: #1877f2;
+}
+
+
+.wrapper .twitter:hover {
+    background: #1da1f2;
+}
+
+.wrapper .twitter:hover .tooltip {
+    background: #1da1f2;
+}
+
+.wrapper .twitter:hover .tooltip::before {
+    background: #1da1f2;
+}
+
+.icon>a {
+    color: #333;
+}
+
+.wrapper .instagram:hover {
+    background: #e4405f;
+}
+
+.wrapper .instagram:hover .tooltip {
+    background: #e4405f;
+}
+
+.wrapper .instagram:hover .tooltip::before {
+    background: #e4405f;
+}
